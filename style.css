@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: #ffeef5;
-  color: #000;
+  font-family: Georgia, serif;
+  background-color: #ffeaf3;
+  color: #111;
   text-align: center;
 }
 
@@ -11,6 +11,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  background: white;
+  border-bottom: 2px solid #e6007e;
 }
 
 .logo {
@@ -22,25 +24,30 @@ header {
 }
 
 .logo img {
-  width: 40px;
+  height: 40px;
   margin-right: 10px;
 }
 
 nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: #000;
+  color: #111;
   font-weight: bold;
 }
 
 main h1 {
-  font-size: 2.5rem;
-  margin-top: 2rem;
+  font-size: 2.4rem;
+  margin-top: 3rem;
+  line-height: 1.4;
+}
+
+.highlight {
+  font-weight: 400;
 }
 
 .shop-button {
   display: inline-block;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   padding: 0.75rem 2rem;
   border: 1px solid #000;
   text-decoration: none;
@@ -51,16 +58,22 @@ main h1 {
 .products {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin: 2rem;
   flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .product-card {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 1rem;
   width: 200px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
 }
 
 .product-card img {
@@ -71,4 +84,5 @@ main h1 {
 
 .product-card p {
   font-size: 1.1rem;
+  margin: 0;
 }
