@@ -1,58 +1,75 @@
 body {
   margin: 0;
-  font-family: Georgia, serif;
-  background-color: #ffeaf3;
-  color: #111;
-  text-align: center;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff0f5;
+  color: #1a1a1a;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.2rem 3rem;
   background: white;
-  border-bottom: 2px solid #e6007e;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #e6007e;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #d21f6b;
+  font-family: 'Playfair Display', serif;
 }
 
 .logo img {
   height: 40px;
-  margin-right: 10px;
+  margin-right: 12px;
 }
 
 nav a {
-  margin-left: 20px;
+  margin-left: 30px;
   text-decoration: none;
-  color: #111;
-  font-weight: bold;
+  font-weight: 600;
+  color: #444;
+  transition: color 0.3s;
 }
 
-main h1 {
-  font-size: 2.4rem;
-  margin-top: 3rem;
-  line-height: 1.4;
+nav a:hover {
+  color: #d21f6b;
 }
 
-.highlight {
-  font-weight: 400;
+.hero {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
 }
 
-.shop-button {
-  display: inline-block;
-  margin: 2rem 0;
+.hero h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5rem;
+}
+
+.subheadline {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background-color: #d21f6b;
+  color: white;
   padding: 0.75rem 2rem;
-  border: 1px solid #000;
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #b51c5c;
 }
 
 .products {
@@ -60,16 +77,17 @@ main h1 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 
 .product-card {
-  background-color: #fff;
+  background-color: white;
   border-radius: 12px;
-  padding: 1rem;
-  width: 200px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
+  width: 220px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
 }
 
 .product-card:hover {
@@ -78,11 +96,17 @@ main h1 {
 
 .product-card img {
   width: 100%;
-  height: auto;
+  max-height: 160px;
+  object-fit: contain;
   margin-bottom: 1rem;
 }
 
-.product-card p {
+.product-card h3 {
+  margin: 0.5rem 0 0.25rem;
   font-size: 1.1rem;
+}
+
+.product-card p {
   margin: 0;
+  color: #666;
 }
